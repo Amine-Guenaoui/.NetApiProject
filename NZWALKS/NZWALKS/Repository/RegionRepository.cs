@@ -45,10 +45,12 @@ namespace NZWALKS.Repository
         public async Task<Region> UpdateAsync(Guid id, Region region)
         {
             var existingregion = await nZWalksDbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
+          
             if (existingregion == null)
             {
                 return null;
             }
+
             existingregion.Code = region.Code;
             existingregion.Name = region.Name;
             existingregion.Area = region.Area;
