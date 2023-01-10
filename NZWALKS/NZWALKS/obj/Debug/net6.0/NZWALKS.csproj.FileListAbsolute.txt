@@ -60,3 +60,5 @@ C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\obj\Debug\net
 C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\obj\Debug\net6.0\NZWALKS.pdb
 C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\obj\Debug\net6.0\NZWALKS.genruntimeconfig.cache
 C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\obj\Debug\net6.0\ref\NZWALKS.dll
+C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\agueanou\Desktop\APICOURSE\.NetApiProject\NZWALKS\NZWALKS\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
