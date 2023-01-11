@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "+V5KVTw9+J3b0NEoofMRR76dncGmJb63cLpR3//XChN6+zjyDipw/vZzsyA2+ICu1zpAAyar2LYWjwfWz3Agzw==",
+  "dgSpecHash": "QGgORzhj7sXwt0j8na3gsVCRbJ821WH89m4WWh208W6i8b9cTUUtRnZruy3ttO/3p2NVvftvSpTwRzFTTKYQcQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\agueanou\\Desktop\\APICOURSE\\.NetApiProject\\NZWALKS\\NZWALKS\\NZWALKS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\agueanou\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\agueanou\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\agueanou\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\agueanou\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\agueanou\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\agueanou\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\agueanou\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\agueanou\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using NZWALKS.Data;
 using NZWALKS.Repository;
@@ -21,7 +22,8 @@ builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 builder.Services.AddScoped<IWalkRepository, WalkRepository>();
 builder.Services.AddScoped<IWalkDifficultyRepository, WalkDifficultyRepository>();
 
-
+//fluent validation 
+builder.Services.AddFluentValidation(option => option.RegisterValidatorsFromAssemblyContaining<Program>());
 //automapper 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 

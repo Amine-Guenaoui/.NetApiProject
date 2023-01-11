@@ -129,46 +129,6 @@ namespace NZWALKS.Controllers
 
         private  async Task<bool> ValidateUpdateWalkAsync(UpdateWalkRequest updateWalk)
         {
-            if (addWalkRequest == null)
-            {
-                ModelState.AddModelError(nameof(addWalkRequest), $"{nameof(addWalkRequest)} cannot be null or empty .");
-                //return false;
-            }
-            if (string.IsNullOrWhiteSpace(addWalkRequest.Name))
-            {
-                ModelState.AddModelError(nameof(addWalkRequest.Name), $"{nameof(addWalkRequest.Name)} cannot be white space or empty .");
-                //return false;
-            }
-            if (addWalkRequest.Length < 0)
-            {
-                ModelState.AddModelError(nameof(addWalkRequest.Length), $"{nameof(addWalkRequest.Length)} cannot be negative number.");
-                //return false;
-            }
-            var region = await regionRepository.GetAsync(addWalkRequest.RegionId);
-           
-            if (region  == null)
-            {
-                ModelState.AddModelError(nameof(addWalkRequest.RegionId), $"{nameof(addWalkRequest.RegionId)} is invalide.");
-                //return false;
-            }
-            var wlkdifficulty = await walkDifficultyRepository.GetAsync(addWalkRequest.walkDifficultyId);
-
-            if (wlkdifficulty == null)
-            {
-                ModelState.AddModelError(nameof(addWalkRequest.walkDifficultyId), $"{nameof(addWalkRequest.walkDifficultyId)} is invalide.");
-                //return false;
-            }
-
-            if (ModelState.ErrorCount > 0)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private async Task<bool> ValidateAddWalkAsync(AddWalkRequest updateWalk)
-        {
             if (updateWalk == null)
             {
                 ModelState.AddModelError(nameof(updateWalk), $"{nameof(updateWalk)} cannot be null or empty .");
@@ -185,8 +145,8 @@ namespace NZWALKS.Controllers
                 //return false;
             }
             var region = await regionRepository.GetAsync(updateWalk.RegionId);
-
-            if (region == null)
+           
+            if (region  == null)
             {
                 ModelState.AddModelError(nameof(updateWalk.RegionId), $"{nameof(updateWalk.RegionId)} is invalide.");
                 //return false;
@@ -196,6 +156,46 @@ namespace NZWALKS.Controllers
             if (wlkdifficulty == null)
             {
                 ModelState.AddModelError(nameof(updateWalk.walkDifficultyId), $"{nameof(updateWalk.walkDifficultyId)} is invalide.");
+                //return false;
+            }
+
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private async Task<bool> ValidateAddWalkAsync(AddWalkRequest addWalkRequest)
+        {
+            if (addWalkRequest == null)
+            {
+                ModelState.AddModelError(nameof(addWalkRequest), $"{nameof(addWalkRequest)} cannot be null or empty .");
+                //return false;
+            }
+            if (string.IsNullOrWhiteSpace(addWalkRequest.Name))
+            {
+                ModelState.AddModelError(nameof(addWalkRequest.Name), $"{nameof(addWalkRequest.Name)} cannot be white space or empty .");
+                //return false;
+            }
+            if (addWalkRequest.Length < 0)
+            {
+                ModelState.AddModelError(nameof(addWalkRequest.Length), $"{nameof(addWalkRequest.Length)} cannot be negative number.");
+                //return false;
+            }
+            var region = await regionRepository.GetAsync(addWalkRequest.RegionId);
+
+            if (region == null)
+            {
+                ModelState.AddModelError(nameof(addWalkRequest.RegionId), $"{nameof(addWalkRequest.RegionId)} is invalide.");
+                //return false;
+            }
+            var wlkdifficulty = await walkDifficultyRepository.GetAsync(addWalkRequest.walkDifficultyId);
+
+            if (wlkdifficulty == null)
+            {
+                ModelState.AddModelError(nameof(addWalkRequest.walkDifficultyId), $"{nameof(addWalkRequest.walkDifficultyId)} is invalide.");
                 //return false;
             }
 
